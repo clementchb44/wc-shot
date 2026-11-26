@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0f2a3a"><title>Toilet Shot</title><link rel="stylesheet" href="style.css?v=1"></head>
+<body>
+<header><a class="brand" href="./">Toilet <span>Shot</span><small>VISE · GLISSE · RELÂCHE</small></a><div class="coins">🪙 <b id="coins">0</b></div></header>
+<nav aria-label="Navigation"><button class="active" data-tab="jouer">🎯 <span>Jouer</span></button><button data-tab="perso">🧍 <span>Personnage</span></button></nav>
+<main>
+<section id="jouer" class="tab visible">
+ <div id="menu">
+  <h1>Choisis un niveau</h1>
+  <p class="fine">Plus tu avances, plus c’est dur : murs, vent, toilettes qui bougent… Gagne des pièces pour acheter des skins !</p>
+  <div id="levels" class="levels"></div>
+ </div>
+ <div id="game" hidden>
+  <div class="hud">
+   <button id="back" class="secondary">← Niveaux</button>
+   <div class="hud-mid"><b id="h-level">Niveau 1</b><span id="h-theme"></span></div>
+   <div class="hud-right"><span id="h-wind" title="Vent"></span><button id="fs" class="secondary" aria-label="Plein écran">⛶</button></div>
+  </div>
+  <div class="hud2"><div class="shots" id="shots" aria-label="Tirs restants"></div><div class="fill"><span>Cuvette</span><div class="bar"><u id="fillbar"></u></div></div></div>
+  <div class="canvas-wrap"><canvas id="cv" width="1800" height="900"></canvas>
+   <div id="hint" class="hint">Touche et glisse <b>vers l’arrière</b>, puis relâche !</div>
+   <div id="overlay" class="overlay-game" hidden></div>
+  </div>
+  <p class="fine rot">💡 Astuce : tourne ton téléphone en mode paysage pour mieux viser.</p>
+ </div>
+</section>
+
+<section id="perso" class="tab">
+ <h1>Personnage</h1>
+ <div class="perso-grid">
+  <div class="preview"><canvas id="pv" width="1800" height="900"></canvas><p class="fine">Aperçu de ton style</p></div>
+  <div class="shop"><div id="cats" class="chips"></div><div id="skins" class="skins"></div></div>
+ </div>
+</section>
+</main>
+<div id="toast" class="toast" hidden></div>
+<script type="module" src="script.js?v=1"></script>
+</body>
+</html>
